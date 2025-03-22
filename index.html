@@ -3,20 +3,20 @@
 	<head>
 		<meta charset="utf-8">
 		<title>REMISIÓN</title>
-		<link rel="stylesheet" href="https://fredyortegon30.github.io/invoice/style.css">
+		<link rel="stylesheet" href="https://archiwit.github.io/CotizacionPDF/style.css">
 		<link rel="license" href="https://www.opensource.org/licenses/mit-license/">
 	</head>
 	<body>
 		<header>
 			<h1>REMISIÓN</h1>
 			<address>
-				<p>MI EMPRESA</p>
-				<p>NIT 1111111111<br>Calle 11- 10-33</p>
-				<p>Pereira</p>
+				<p>ARCHIPLANNER</p>
+				<p>NIT 488 88 44 48<br>Calle 33, #32 - 46</p>
+				<p>La Aurora</p>
 			</address>
 
 <div style="float: right;">
-    <img alt="" src="https://acortar.link/caSNRS" style="width: 100px; height: 100px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
+    <img alt="" src="https://acortar.link/ppEsEV" style="width: 100px; height: 100px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
 </div>
 
 
@@ -31,11 +31,11 @@
 			<table class="meta">
 				<tr>
 					<th><span>Remisión #</span></th>
-					<td><span>&lt;&lt;[N_factura]&gt;&gt;</span></td>
+					<td><span>&lt;&lt;[id_cot]&gt;&gt;</span></td>
 				</tr>
 				<tr>
 					<th><span>Fecha</span></th>
-					<td><span>&lt;&lt;[Fecha]&gt;&gt;</span></td>
+					<td><span>&lt;&lt;[CotFechaCreacion]&gt;&gt;</span></td>
 				</tr>
 				<tr>
 					<th><span>Total</span></th>
@@ -68,23 +68,257 @@
 			<table class="balance">
 				<tr>
 					<th><span>Total</span></th>
-					<td><span>&lt;&lt;[TOTAL VENTA]&gt;&gt;</span></td>
+					<td><span>&lt;&lt;[CotSubTotal]&gt;&gt;</span></td>
 				</tr>
 				<tr>
-					<th><span>Otros conceptos</span></th>
-					<td><span data-prefix="$"></span><span>0.00</span></td>
+					<th><span>IVA</span></th>
+					<td><span data-prefix="$"></span><span>[CotDescuentos]</span></td>
 				</tr>
 				<tr>
-					<th><span>Total a pagar</span></th>
-					<td><span>&lt;&lt;[TOTAL VENTA]&gt;&gt;</span></td>
+					<th><span>Total</span></th>
+					<td><span>&lt;&lt;[CotTotalPagar]&gt;&gt;</span></td>
 				</tr>
 			</table>
 		</article>
 		<aside>
-			<h1><span>Notas adicionales</span></h1>
+			<h1><span>Observaciones</span></h1>
 			<div>
-				<p>Pagos a la cuenta de ahorros bancolombia # </p>
+				<p>[CotNota]</p>
 			</div>
 		</aside>
 	</body>
+</html>
+
+
+
+<body>
+<h1>Task for htmlcss</h1>
+<h2>Cotizacion</h2>
+<p>id_cot: &lt;&lt;[id_cot]&gt;&gt;</p>
+<p>CotNum: &lt;&lt;[CotNum]&gt;&gt;</p>
+<p>CotFechaCreacion: &lt;&lt;&gt;&gt;</p>
+<p>CotFechaEvento: &lt;&lt;[CotFechaEvento]&gt;&gt;</p>
+<p>CotTipoEvento: &lt;&lt;[CotTipoEvento]&gt;&gt;</p>
+<p>CotEstilo: &lt;&lt;[CotEstilo]&gt;&gt;</p>
+<p>CotHoraIni: &lt;&lt;[CotHoraIni]&gt;&gt;</p>
+<p>CotHoraFin: &lt;&lt;[CotHoraFin]&gt;&gt;</p>
+<p>CotCantAdultos: &lt;&lt;[CotCantAdultos]&gt;&gt;</p>
+<p>CotCantNi&#241;o: &lt;&lt;[CotCantNi&#241;o]&gt;&gt;</p>
+<p>CotPaletaDeColores: &lt;&lt;[CotPaletaDeColores]&gt;&gt;</p>
+<p>CotTipo: &lt;&lt;[CotTipo]&gt;&gt;</p>
+<p>CotStatus: &lt;&lt;[CotStatus]&gt;&gt;</p>
+<p>CPDF: &lt;&lt;[CPDF]&gt;&gt;</p>
+<p>CotNota: &lt;&lt;&gt;&gt;</p>
+<p>CotAsesor: &lt;&lt;[CotAsesor]&gt;&gt;</p>
+<p>CotContrato: &lt;&lt;[CotContrato]&gt;&gt;</p>
+<p>Locaciones: &lt;&lt;[Locaciones]&gt;&gt;</p>
+<p>Usuario: &lt;&lt;[Usuario]&gt;&gt;</p>
+<p>Clientes: &lt;&lt;[Clientes]&gt;&gt;</p>
+<p>Column_22: &lt;&lt;[Column_22]&gt;&gt;</p>
+<p>CotTotalPax: &lt;&lt;[CotTotalPax]&gt;&gt;</p>
+<p>CotSubTotal: &lt;&lt;[CotSubTotal]&gt;&gt;</p>
+<p>CotDescuentos: &lt;&lt;[CotDescuentos]&gt;&gt;</p>
+<p>CotTotalPagar: &lt;&lt;[CotTotalPagar]&gt;&gt;</p>
+<p>CotSaldo: &lt;&lt;[CotSaldo]&gt;&gt;</p>
+<p>File_PDF_URL: &lt;&lt;[File_PDF_URL]&gt;&gt;</p>
+<br/><br/>
+<h2>DetallesCotizacion</h2>
+
+<p>&lt;&lt;Start: [Related DetallesCotizacions]&gt;&gt;</p>
+<table>
+    <tbody>
+        <tr>
+            <td>id_deta</td>
+            <td>&lt;&lt;[id_deta]&gt;&gt;</td>
+        </tr>
+        <tr>
+            <td>Cotizacion</td>
+            <td>&lt;&lt;[Cotizacion]&gt;&gt;</td>
+        </tr>
+        <tr>
+            <td>Articulos</td>
+            <td>&lt;&lt;[Articulos]&gt;&gt;</td>
+        </tr>
+        <tr>
+            <td>Usuario</td>
+            <td>&lt;&lt;[Usuario]&gt;&gt;</td>
+        </tr>
+        <tr>
+            <td>DetaCantidad</td>
+            <td>&lt;&lt;[DetaCantidad]&gt;&gt;</td>
+        </tr>
+        <tr>
+            <td>DetaPrecio</td>
+            <td>&lt;&lt;[DetaPrecio]&gt;&gt;</td>
+        </tr>
+        <tr>
+            <td>DetaDescuento</td>
+            <td>&lt;&lt;[DetaDescuento]&gt;&gt;</td>
+        </tr>
+        <tr>
+            <td>DetaNota</td>
+            <td>&lt;&lt;[DetaNota]&gt;&gt;</td>
+        </tr>
+        <tr>
+            <td>DetaIVA</td>
+            <td>&lt;&lt;[DetaIVA]&gt;&gt;</td>
+        </tr>
+        <tr>
+            <td>DetaDescuentoTotal</td>
+            <td>&lt;&lt;[DetaDescuentoTotal]&gt;&gt;</td>
+        </tr>
+        <tr>
+            <td>DetaTotalAPagar</td>
+            <td>&lt;&lt;[DetaTotalAPagar]&gt;&gt;</td>
+        </tr>
+        <tr>
+            <td>DetaSubTotal</td>
+            <td>&lt;&lt;[DetaSubTotal]&gt;&gt;</td>
+        </tr>
+        </tbody>
+        </table>
+        
+        <br/>
+        <p>&lt;&lt;End&gt;&gt;</p>
+        <br/>
+        <br/>
+        <h2>Pagos</h2>
+        <p>&lt;&lt;Start: [Related Pagos]&gt;&gt;</p>
+        
+        <table>
+            <tbody>
+                <tr>
+                    <td>id_pago</td>
+                    <td>&lt;&lt;[id_pago]&gt;&gt;</td>
+                </tr>
+                <tr>
+                    <td>Eventos</td>
+                    <td>&lt;&lt;[Eventos]&gt;&gt;</td>
+                </tr>
+                <tr>
+                    <td>Cotizacion</td>
+                    <td>&lt;&lt;[Cotizacion]&gt;&gt;</td>
+                </tr>
+                <tr>
+                    <td>Usuario</td>
+                    <td>&lt;&lt;[Usuario]&gt;&gt;</td>
+                </tr>
+                <tr>
+                    <td>MetodoPago</td>
+                    <td>&lt;&lt;[MetodoPago]&gt;&gt;</td>
+                </tr>
+                <tr>
+                    <td>PagoTipo</td>
+                    <td>&lt;&lt;[PagoTipo]&gt;&gt;</td>
+                </tr>
+                <tr>
+                    <td>PagoMonto</td>
+                    <td>&lt;&lt;[PagoMonto]&gt;&gt;</td>
+                </tr>
+                <tr>
+                    <td>PagoFecha</td>
+                    <td>&lt;&lt;[PagoFecha]&gt;&gt;</td>
+                </tr>
+                <tr>
+                    <td>PagoComprobante</td>
+                    <td>&lt;&lt;[PagoComprobante]&gt;&gt;</td>
+                </tr>
+                <tr>
+                    <td>PagoNota</td>
+                    <td>&lt;&lt;[PagoNota]&gt;&gt;</td>
+                </tr>
+                <tr>
+                    <td>SaldoPendiente</td>
+                    <td>&lt;&lt;[SaldoPendiente]&gt;&gt;</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <br/>
+        <p>&lt;&lt;End&gt;&gt;</p>
+        
+        <br/>
+        <br/>
+        <h2>Politica</h2>
+        <p>&lt;&lt;Start: [Related Politicas]&gt;&gt;</p>
+        <table><tbody>
+            <tr>
+                <td>id_poli</td>
+                <td>&lt;&lt;[id_poli]&gt;&gt;</td>
+            </tr>
+            <tr>
+                <td>Cotizacion</td>
+                <td>&lt;&lt;[Cotizacion]&gt;&gt;</td>
+            </tr>
+            <tr>
+                <td>Usuario</td>
+                <td>&lt;&lt;[Usuario]&gt;&gt;</td>
+            </tr>
+            <tr>
+                <td>PTerminos</td>
+                <td>&lt;&lt;[PTerminos]&gt;&gt;</td>
+            </tr>
+        </tbody></table>
+        
+        <br/>
+        <p>&lt;&lt;End&gt;&gt;</p>
+        <br/>
+        <br/>
+        <p>&lt;&lt;Start: [Related Eventos]&gt;&gt;</p>
+        <h2>Eventos</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td>ID</td>
+                    <td>&lt;&lt;[ID]&gt;&gt;</td>
+                </tr>
+                <tr>
+                    <td>Cotizacion</td>
+                    <td>&lt;&lt;[Cotizacion]&gt;&gt;</td>
+                </tr>
+                <tr>
+                    <td>Usuario</td>
+                    <td>&lt;&lt;[Usuario]&gt;&gt;</td>
+                </tr>
+                <tr>
+                    <td>EventNombre</td>
+                    <td>&lt;&lt;[EventNombre]&gt;&gt;</td>
+                </tr>
+                <tr>
+                    <td>EventFecha</td>
+                    <td>&lt;&lt;[EventFecha]&gt;&gt;</td>
+                </tr>
+                <tr>
+                    <td>EventHoraIni</td>
+                    <td>&lt;&lt;[EventHoraIni]&gt;&gt;</td>
+                </tr>
+                <tr>
+                    <td>EventHoraFin</td>
+                    <td>&lt;&lt;[EventHoraFin]&gt;&gt;</td>
+                </tr>
+                <tr>
+                    <td>EventUbicaci&#243;n</td>
+                    <td>&lt;&lt;[EventUbicaci&#243;n]&gt;&gt;</td>
+                </tr>
+                <tr>
+                    <td>EventContrato</td>
+                    <td>&lt;&lt;[EventContrato]&gt;&gt;</td>
+                </tr>
+                <tr>
+                    <td>EventEstado</td>
+                    <td>&lt;&lt;[EventEstado]&gt;&gt;</td>
+                </tr>
+                <tr>
+                    <td>EventNotas</td>
+                    <td>&lt;&lt;[EventNotas]&gt;&gt;</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <br/>
+        <p>&lt;&lt;End&gt;&gt;</p>
+        
+        <br/><br/>
+        </body>
+
 </html>
